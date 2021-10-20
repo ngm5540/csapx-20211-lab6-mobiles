@@ -1,0 +1,9 @@
+load mobile-6.txt
+load mobile-7.txt
+load mobile-8.txt
+load mobile-9.txt
+load mobile-10.txt
+load missing-file.txt
+load mobile-5.txt
+find XXX
+quit
