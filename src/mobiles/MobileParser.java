@@ -8,7 +8,7 @@ import java.io.IOException;
  * The class who parses the mobile file and builds the mobile tree.
  *
  * @author RIT CS
- * @author YOUR NAME HERE
+ * @author Nate Mount
  */
 public class MobileParser {
     /** the root node */
@@ -36,8 +36,21 @@ public class MobileParser {
      * @throws IOException an IO error occurs reading from the file
      */
     private Node parse(BufferedReader in) throws IOException {
-        // TODO
-        return null;
+    
+        String[] line = in.readLine().split("\\s+");
+
+        switch(line[0]){
+
+            case ROD:
+                 return new Rod(line[1], Integer.parseInt(line[2]), Integer.parseInt(line[3]), parse(in), Integer.parseInt(line[4]), parse(in)); // OG: Rod(line[1], Integer.parseInt(line[2]), Integer.parseInt(line[3]), Integer.parseInt(line[4]), parse(in),  parse(in))
+
+            case BALL:
+                 return new Ball(line[1], Integer.parseInt(line[2]), Integer.parseInt(line[3]), Integer.parseInt(line[4]) );
+
+    };
+
+    return null;
+    
     }
 
     /**

@@ -64,6 +64,7 @@ public class Mobiles {
             MobileParser parser = new MobileParser(filename);
             this.root = parser.getRoot();
             System.out.println(filename + " loaded and parsed!");
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -113,10 +114,14 @@ public class Mobiles {
                     }
                 }
                 case BALANCED -> {
-                    // TODO
+
+                    System.out.println( this.root.getName()+" balanced? "+this.root.isBalanced()+"\nImbalanced amount: "+this.root.getImbalance());
+
                 }
                 case WEIGHT -> {
-                    // TODO
+
+                    System.out.println( this.root.getName()+" weight? "+this.root.getWeight() );
+
                 }
                 case ROOT -> root();
                 case QUIT -> done = true;

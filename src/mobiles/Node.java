@@ -4,8 +4,16 @@ package mobiles;
  * A node in the mobile tree.
  *
  * @author RIT CS
- * @author YOUR NAME HERE
+ * @author Nate Mount
  */
 public interface Node {
-    // TODO
+
+	public String getName();
+    
+	public int getWeight();
+
+	public int getImbalance();
+
+	public boolean isBalanced();
+
 }
